@@ -7,14 +7,14 @@
     <title>Shipping Form</title>
 </head>
 <body>
-    <h1>Postal Rate Calculator </h1>
-    <form>
-    <input type="number" step=".1" name="weight">
+    <h1>Postal Rate Calculator</h1>
+    <form method="get" action="/results">
+    <p>Input a weight rounding up<input type="number" step="1" name="weight"></p>
         <select name="type">
-            <option value="stamped">Letter(stamped)</option>
-            <option value="metered">Letter(metered)</option>
-            <option value="large">Large Envelope</option>
-            <option value="package">Package</option>
+            <option value="stamped">Letter(stamped) 3.5 oz max</option>
+            <option value="metered">Letter(metered) 3.5 oz max</option>
+            <option value="large">Large Envelope  13 oz max</option>
+            <option value="package">Package   13 oz max</option>
         </select>
         <button type="submit">Submit</button>
     </form>

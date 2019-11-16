@@ -1,5 +1,5 @@
 const express = require('express');
-//var gameEngine = require('./gameEngine.js');
+var results = require('./results.js');
 var app = express();
 // added comment
 app.set('port', process.env.PORT || 5000)
@@ -9,7 +9,7 @@ app.set('port', process.env.PORT || 5000)
    .get('/', function(req, res){
       res.sendFile('form.html', { root: __dirname + "/public"});
    })
-   //.get('/game', gameEngine.playGame)
+   .get('/results', results.doit)
    .listen(app.get('port'), function() {
       console.log('Listening on port: ' + app.get('port'));
    })
